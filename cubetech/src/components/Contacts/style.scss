@@ -1,0 +1,148 @@
+.bg-fon {
+  background-image: url(../121.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.contact {
+  &__block-two__content {
+    margin: 70px 100px;
+  }
+  &__block-two {
+    border-radius: 20px;
+    text-align: center;
+    background: #434477;
+    width: 618px;
+    min-height: 518px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inp {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #262747;
+    resize: none;
+    padding-left: 15px;
+    border: none;
+    background: transparent;
+    outline: none;
+    position: relative;
+    z-index: 11;
+    font-family: "Poppins", sans-serif;
+  }
+  .inputbox {
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+  }
+  .inputbox span {
+    color: #fff;
+    position: absolute;
+    bottom: 22px;
+    left: 45px;
+    pointer-events: none;
+    transition: all 0.4s;
+  }
+
+  .inputbox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    pointer-events: none;
+    transition: all 0.4s;
+    border-radius: 4px;
+  }
+
+  .inputbox .inp:valid ~ span,
+  .inputbox .inp:focus ~ span {
+    opacity: 0.5;
+    transform: translateX(-40px) translateY(-45px);
+    font-size: 0.75em;
+  }
+  .inputbox .inp:valid ~ i,
+  .inputbox .inp:focus ~ i {
+    height: 60px;
+    background-color: #fff;
+  }
+
+  .textarea {
+    top: 15px;
+  }
+
+  &__btn {
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    border: none;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    transition: all 0.4s;
+    margin-top: 35px;
+    cursor: pointer;
+    &:hover {
+      color: #1e1e1e;
+      background-color: #fff;
+    }
+  }
+  &__wrapper {
+    text-align: start;
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 285px;
+    color: #fff;
+    margin-left: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 106.3%;
+    letter-spacing: 0.04em;
+  }
+  &__checkbox-real {
+    position: absolute;
+    height: 0;
+    width: 0;
+    scale: 0;
+    z-index: -1;
+  }
+
+  &__checkbox-custom {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    vertical-align: sub;
+    cursor: pointer;
+    &::before {
+      background-image: url(../+.svg);
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      left: 15%;
+      top: 15%;
+      scale: 0;
+      transition: all 0.4s;
+      display: inline-block;
+      height: 13px;
+      width: 13px;
+    }
+  }
+  &__checkbox-real:checked + &__checkbox-custom::before {
+    scale: 1;
+  }
+}

@@ -1,0 +1,70 @@
+.header {
+  background: #5c609a;
+  width: 100%;
+  height: 110px;
+  &__logo {
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 215px;
+  }
+  &__link {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__contact {
+    width: 215px;
+    text-align: end;
+  }
+}
+.btn {
+  width: 215px;
+  height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  border: 1px solid #ffffff;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  &:hover {
+    background: #ffffff;
+    a {
+      color: #5c609a;
+    }
+  }
+  a {
+    color: #fff;
+  }
+}
+
+@media (max-width: 1080px) {
+  .header {
+    height: 130px;
+    &__logo {
+      width: auto;
+    }
+    &__box {
+      display: flex;
+      flex-direction: column;
+    }
+    &__menu {
+      margin-top: 20px;
+    }
+    &__contact {
+      width: 0;
+      display: flex;
+    }
+    .email {
+      display: none;
+    }
+    .phone {
+      margin-top: 50px;
+      margin-right: auto;
+    }
+  }
+}

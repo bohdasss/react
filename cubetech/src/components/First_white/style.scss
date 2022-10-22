@@ -1,0 +1,16 @@
+.white {
+  width: 100%;
+  height: 100vh;
+  color: #434477;
+  &__content {
+    margin-top: 200px;
+  }
+  &__block {
+    max-width: 700px;
+  }
+  h3,
+  h2,
+  p {
+    color: #434477;
+  }
+}

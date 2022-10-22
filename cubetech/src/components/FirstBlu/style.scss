@@ -1,0 +1,20 @@
+.blu {
+  background: #434477;
+  width: 100%;
+  height: 110vh;
+  color: #434477;
+  &__content {
+    margin-top: 200px;
+  }
+  &__block {
+    max-width: 700px;
+    text-align: -webkit-right;
+  }
+
+  h3,
+  h2,
+  p {
+    color: #fff;
+    text-align: end;
+  }
+}
